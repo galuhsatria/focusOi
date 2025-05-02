@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Geist:100,200,300,regular,500,600,700,800,900);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Geist', sans-serif;
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  background: #1d4ed8;
+  background: linear-gradient(167deg, rgba(29, 78, 216, 1) 0%, rgba(96, 165, 250, 1) 100%);
+  color: white;
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+}
+.title p {
+  margin-top: 4px;
+  color: #cbd5e1;
+}
+
+.app {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.menu-item {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  cursor: pointer;
+  background: none rgba(0, 0, 0, 0.15);
+}
+
+.time {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#start {
+  font-family: inherit;
+  font-size: 18px;
+  background: white;
+  color: royalblue;
+  padding: 0.5em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#start span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+#start svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+#start:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+#start:hover svg {
+  transform: translateX(1.2em) scale(1.1);
+}
+
+#start:hover span {
+  transform: translateX(5em);
+}
+
+#start:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.settings {
+  font-size: 16px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.settings p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#reset-settings {
+  cursor: pointer;
+}
+
+.custom-time p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.custom-time-form {
+  margin-top: 10px;
+  width: full;
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;
+}
+
+.input-custom-time {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  width: full;
+}
+
+.input-custom-time input {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: #f4f4f5;
+  width: 90px;
+  font-size: 16px;
+}
+
+.input-custom-time input:focus {
+  border: none;
+  outline: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.notifications {
+  margin-top: 20px;
+}
+
+.notifications p {
+  font-size: 14px;
+}
+
+.notification-choices {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 1rem;
+}
+
+.notification-sound {
+  background-color: rgba(0, 0, 0, 0.068);
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 200ms;
+  border-radius: 3px;
+}
+
+.notification-sound.active,
+.notification-sound:hover {
+  background-color: rgba(0, 0, 0, 0.349);
+  box-shadow: 0 0 0 1px white;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+footer a {
+  color: white;
+}
